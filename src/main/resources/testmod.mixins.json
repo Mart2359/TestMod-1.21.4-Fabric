@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "net.martz0.testmod.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
