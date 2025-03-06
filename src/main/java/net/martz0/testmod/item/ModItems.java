@@ -14,6 +14,7 @@ import java.util.function.Function;
 public final class ModItems {
 
     public static final Item DARK_FEATHER = register("dark_feather", Item::new, new Item.Settings());
+    public static final Item RAMA_ESSENCE = register("rama_essence", Item::new, new Item.Settings());
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestMod.MOD_ID, path));
@@ -23,6 +24,7 @@ public final class ModItems {
     public static void registerToVanillaItemGroups() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
             content.add(DARK_FEATHER);
+            content.add(RAMA_ESSENCE);
         });
     }
 
