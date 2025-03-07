@@ -25,6 +25,7 @@ public class ModItemGroups {
         ItemGroupEvents.modifyEntriesEvent(TEST_MOD_ITEM_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(ModItems.RAMA_ESSENCE);
             itemGroup.add(ModItems.DARK_FEATHER);
+            itemGroup.add(ModItems.RAMA_CRYSTAL);
             itemGroup.add(ModBlocks.INFUSION_TABLE);
         });
     }
