@@ -1,5 +1,6 @@
 {
   "item.testmod.dark_feather": "Dark Feather",
   "item.testmod.rama_essence": "Rama Essence",
-  "item.testmod.infusion_table": "Infusion Table"
+  "item.testmod.infusion_table": "Infusion Table",
+  "itemGroup.testmod.testmod": "Test Mod"
 }
