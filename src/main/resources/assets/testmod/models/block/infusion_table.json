@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "testmod:block/infusion_table_bottom",
+    "east": "testmod:block/infusion_table_side",
+    "north": "testmod:block/infusion_table_front",
+    "particle": "testmod:block/infusion_table_front",
+    "south": "testmod:block/infusion_table_front",
+    "up": "testmod:block/infusion_table_top",
+    "west": "testmod:block/infusion_table_side"
+  }
+}
