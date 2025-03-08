@@ -3,6 +3,8 @@ package net.martz0.testmod.block;
 import net.martz0.testmod.TestMod;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -19,7 +21,12 @@ public class ModBlocks {
     public static final Block INFUSION_TABLE = register(
             "infusion_table",
             Block::new,
-            AbstractBlock.Settings.create().strength(2.5f,2.5f).sounds(BlockSoundGroup.WOOD),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.OAK_TAN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
             true
     );
 
