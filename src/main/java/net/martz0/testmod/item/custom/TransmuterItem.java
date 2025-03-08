@@ -32,7 +32,7 @@ public class TransmuterItem extends Item {
 
         if (blockState.isSolidBlock(world, blockPos) && blockState.isFullCube(world, blockPos) && !blockState.hasBlockEntity()) {
             if (!world.isClient()) {
-                world.playSound(playerEntity, blockPos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.4F + 0.8F);
+                world.playSound(null, blockPos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.4F + 0.8F);
                 world.setBlockState(blockPos, transmuter_block.getDefaultState());
 
                 if (playerEntity instanceof ServerPlayerEntity) {
