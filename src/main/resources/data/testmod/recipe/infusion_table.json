@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "#minecraft:planks",
+    "X": "testmod:rama_crystal"
+  },
+  "pattern": [
+    "XX",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:infusion_table"
+  }
+}
