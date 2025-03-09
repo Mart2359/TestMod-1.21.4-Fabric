@@ -18,6 +18,7 @@ public final class ModItems {
     public static final Item RAMA_CRYSTAL = register("rama_crystal", Item::new, new Item.Settings());
 
     public static final Item DIAMOND_TRANSMUTER = register("diamond_transmuter", settings -> new TransmuterItem(Blocks.DIAMOND_BLOCK, settings), new Item.Settings().maxDamage(64));
+    public static final Item BANANA = register("banana", Item::new, new Item.Settings().food(ModFoodComponents.BANANA, ModConsumableComponents.BANANA));
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestMod.MOD_ID, path));

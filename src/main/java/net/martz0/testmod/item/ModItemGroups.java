@@ -29,6 +29,7 @@ public class ModItemGroups {
             itemGroup.add(ModBlocks.INFUSION_TABLE);
             itemGroup.add(ModItems.DIAMOND_TRANSMUTER);
             itemGroup.add(ModBlocks.WEIRD_BLOCK);
+            itemGroup.add(ModItems.BANANA);
         });
     }
 
