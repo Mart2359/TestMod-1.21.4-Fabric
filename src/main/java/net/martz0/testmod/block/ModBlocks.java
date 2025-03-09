@@ -1,6 +1,7 @@
 package net.martz0.testmod.block;
 
 import net.martz0.testmod.TestMod;
+import net.martz0.testmod.block.custom.WeirdBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
@@ -27,6 +28,17 @@ public class ModBlocks {
                     .strength(3F)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
+            true
+    );
+
+    public static final Block WEIRD_BLOCK = register(
+            "weird_block",
+            WeirdBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.MAGENTA)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(4F)
+                    .sounds(BlockSoundGroup.GLASS),
             true
     );
 
