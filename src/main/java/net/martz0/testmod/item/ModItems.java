@@ -1,5 +1,6 @@
 package net.martz0.testmod.item;
 
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.martz0.testmod.TestMod;
 import net.martz0.testmod.item.custom.TransmuterItem;
 import net.minecraft.block.Blocks;
@@ -27,5 +28,7 @@ public final class ModItems {
 
     public static void registerModItems() {
         TestMod.LOGGER.info("Registering Mod Items For " + TestMod.MOD_ID);
+
+        FuelRegistryEvents.BUILD.register((builder, context) -> builder.add(ModItems.DIAMOND_TRANSMUTER, 1600));
     }
 }
