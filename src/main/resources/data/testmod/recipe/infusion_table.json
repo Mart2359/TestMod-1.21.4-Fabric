@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "#minecraft:planks",
-    "X": "testmod:rama_crystal"
+    "P": "#minecraft:planks",
+    "R": "testmod:rama_crystal"
   },
   "pattern": [
-    "XX",
-    "##",
-    "##"
+    "RR",
+    "PP",
+    "PP"
   ],
   "result": {
     "count": 1,

@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "testmod:rama_essence",
-    "X": "minecraft:amethyst_shard"
+    "R": "testmod:rama_essence",
+    "A": "minecraft:amethyst_shard"
   },
   "pattern": [
-    " # ",
-    "#X#",
-    " # "
+    " R ",
+    "RAR",
+    " R "
   ],
   "result": {
     "count": 1,
