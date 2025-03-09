@@ -1,5 +1,6 @@
 package net.martz0.testmod.block.custom;
 
+import net.martz0.testmod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -34,13 +35,32 @@ public class WeirdBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof ItemEntity item) {
-            if (item.getStack().getItem() == Items.IRON_INGOT) {
-                item.setStack(new ItemStack(Items.IRON_NUGGET, item.getStack().getCount()*9));
-            } else if (item.getStack().getItem() == Items.GOLD_INGOT) {
-                item.setStack(new ItemStack(Items.GOLD_NUGGET, item.getStack().getCount()*9));
+            if (isValidTerm(item.getStack())) {
+                double x = item.getX();
+                double y = item.getY();
+                double z = item.getZ();
+                float yaw = item.getBodyYaw();
+                float pitch = item.getPitch();
+                int count = item.getStack().getCount();
+                item.discard();
+                for (int i = 0; i < count; i++) {
+                    if (world.getRandom().nextInt(10) == 0) {
+                        ItemEntity diamond = new ItemEntity(world, x, y, z, new ItemStack(Items.DIAMOND));
+                        diamond.setAngles(yaw, pitch);
+                        world.spawnEntity(diamond);
+                    } else {
+                        ItemEntity coal = new ItemEntity(world, x, y, z, new ItemStack(Items.COAL));
+                        coal.setAngles(yaw, pitch);
+                        world.spawnEntity(coal);
+                    }
+                }
             }
         }
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+    private boolean isValidTerm(ItemStack stack) {
+        return stack.isIn(ModTags.Items.WEIRD_BLOCK_TRANSFORMABLE);
     }
 
     @Override
