@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "a": "minecraft:amethyst_shard",
+    "r": "testmod:rama_essence"
+  },
+  "pattern": [
+    " r ",
+    "rar",
+    " r "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:rama_crystal"
+  }
+}

@@ -1,0 +1,17 @@
+// 1.21.4	-999999999-01-01T00:00:00	Test Mod/Model Definitions
+0c1ac450d15c6751d92ef573cb16aa65111f7761 assets/testmod/blockstates/infusion_table.json
+f8faa894db55e4147f316147e56ca0215084d52f assets/testmod/blockstates/weird_block.json
+8cc2cf2539beae82bc351155070b269e15400afc assets/testmod/items/banana.json
+1574fc84f9854d641f9435dea951773a93ff259f assets/testmod/items/dark_feather.json
+b8978fae363aad29a8323f43532a176a762cbeb8 assets/testmod/items/diamond_transmuter.json
+518ef7a9f7f4c25cc29d7f1d8bf4a1a4aff2aaf3 assets/testmod/items/infusion_table.json
+34395748ebaa1cbc03831089c8bbc8289bba40e9 assets/testmod/items/rama_crystal.json
+6d2ef186423b3879986632fdb1f8fac157189d80 assets/testmod/items/rama_essence.json
+8bd03ab3e2aa2948bb009ff94f93dd4f06399c1c assets/testmod/items/weird_block.json
+3f312b7f4dbe2c64f396c102da66b4d900803a36 assets/testmod/models/block/infusion_table.json
+30379d6b03bc11d8fd5aa34facdff2fc932e392e assets/testmod/models/block/weird_block.json
+f8b4dea2a893cff5de3692ac160ceef62418cdd8 assets/testmod/models/item/banana.json
+32c76767df06299e40d15d9b14b28d507b66250a assets/testmod/models/item/dark_feather.json
+588b021e01948e6cce92f8a49be82952a2d570bb assets/testmod/models/item/diamond_transmuter.json
+bff212b1639afe28e10aa7c8cb82aa2d5865d38f assets/testmod/models/item/rama_crystal.json
+a9e5a81bb93f45a1c2f6dcdd29f10d1337f63b5b assets/testmod/models/item/rama_essence.json

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "d": "minecraft:diamond_block",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    "d",
+    "s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:diamond_transmuter"
+  }
+}

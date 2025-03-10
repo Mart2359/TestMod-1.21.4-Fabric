@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "p": "#minecraft:planks",
+    "r": "testmod:rama_crystal"
+  },
+  "pattern": [
+    "rr",
+    "pp",
+    "pp"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:infusion_table"
+  }
+}
