@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "multi_bench",
   "key": {
     "d": "minecraft:diamond_block",
     "s": "minecraft:stick"

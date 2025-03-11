@@ -4,9 +4,11 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.martz0.testmod.block.ModBlocks;
 import net.martz0.testmod.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -30,7 +32,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" r ")
                         .input('r', ModItems.RAMA_ESSENCE)
                         .input('a', Items.AMETHYST_SHARD)
-                        .group("multi_bench")
                         .criterion(hasItem(ModItems.RAMA_ESSENCE), conditionsFromItem(ModItems.RAMA_ESSENCE))
                         .offerTo(exporter);
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAMA_CRYSTAL_BLOCK)
@@ -38,7 +39,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("rrr")
                         .pattern("rrr")
                         .input('r', ModItems.RAMA_CRYSTAL)
-                        .group("multi_bench")
                         .criterion(hasItem(ModItems.RAMA_CRYSTAL), conditionsFromItem(ModItems.RAMA_CRYSTAL))
                         .offerTo(exporter);
                 createShapeless(RecipeCategory.MISC, ModItems.RAMA_CRYSTAL)
@@ -51,7 +51,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("pp")
                         .input('r', ModItems.RAMA_CRYSTAL)
                         .input('p', ItemTags.PLANKS)
-                        .group("multi_bench")
                         .criterion(hasItem(ModItems.RAMA_CRYSTAL), conditionsFromItem(ModItems.RAMA_CRYSTAL))
                         .offerTo(exporter);
                 createShaped(RecipeCategory.MISC, ModItems.DIAMOND_TRANSMUTER)
@@ -59,7 +58,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("s")
                         .input('d', Items.DIAMOND_BLOCK)
                         .input('s', Items.STICK)
-                        .group("multi_bench")
                         .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
                         .offerTo(exporter);
                 createShaped(RecipeCategory.MISC, ModBlocks.WEIRD_BLOCK)
@@ -69,9 +67,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('a', Items.AMETHYST_BLOCK)
                         .input('g', Items.GLASS)
                         .input('c', Items.CRAFTING_TABLE)
-                        .group("multi_bench")
                         .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
                         .offerTo(exporter);
+                createStairsRecipe(ModBlocks.SMOOTH_STONE_STAIRS, Ingredient.ofItem(Blocks.SMOOTH_STONE))
+                        .criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
             }
         };
     }

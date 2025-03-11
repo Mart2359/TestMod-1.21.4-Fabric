@@ -31,6 +31,7 @@ public class ModItemGroups {
             itemGroup.add(ModItems.DIAMOND_TRANSMUTER);
             itemGroup.add(ModBlocks.WEIRD_BLOCK);
             itemGroup.add(ModItems.BANANA);
+            itemGroup.add(ModBlocks.SMOOTH_STONE_STAIRS);
         });
     }
 

@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "multi_bench",
   "key": {
     "a": "minecraft:amethyst_block",
     "c": "minecraft:crafting_table",

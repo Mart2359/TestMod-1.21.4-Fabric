@@ -18,5 +18,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAMA_CRYSTAL_BLOCK);
         addDrop(ModBlocks.INFUSION_TABLE);
         addDrop(ModBlocks.WEIRD_BLOCK, dropsWithSilkTouch(ModBlocks.WEIRD_BLOCK));
+        addDrop(ModBlocks.SMOOTH_STONE_STAIRS);
     }
 }

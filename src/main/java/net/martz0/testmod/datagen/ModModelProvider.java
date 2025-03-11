@@ -6,6 +6,7 @@ import net.martz0.testmod.block.ModBlocks;
 import net.martz0.testmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.client.data.*;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -18,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAMA_CRYSTAL_BLOCK);
         registerSmithingTable(ModBlocks.INFUSION_TABLE, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WEIRD_BLOCK);
+        registerCustomStairs(ModBlocks.SMOOTH_STONE_STAIRS, blockStateModelGenerator);
     }
 
     private void registerSmithingTable(Block block, BlockStateModelGenerator blockStateModelGenerator) {
@@ -31,6 +33,32 @@ public class ModModelProvider extends FabricModelProvider {
                 .put(TextureKey.WEST, TextureMap.getSubId(block, "_side"));
         blockStateModelGenerator.blockStateCollector.accept(
                 BlockStateModelGenerator.createSingletonBlockState(block, Models.CUBE.upload(block, textureMap, blockStateModelGenerator.modelCollector))
+        );
+    }
+
+    private void registerCustomStairs(Block block, BlockStateModelGenerator blockStateModelGenerator) {
+        TextureMap textureMap = new TextureMap()
+                .put(TextureKey.SIDE, TextureMap.getSubId(block, ""))
+                .put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
+                .put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_top"))
+                .put(TextureKey.PARTICLE, TextureMap.getSubId(block, "_top"));
+        Identifier innerModelId = Models.INNER_STAIRS.upload(
+                block,
+                textureMap,
+                blockStateModelGenerator.modelCollector
+        );
+        Identifier regularModelId = Models.STAIRS.upload(
+                block,
+                textureMap,
+                blockStateModelGenerator.modelCollector
+        );
+        Identifier outerModelId = Models.OUTER_STAIRS.upload(
+                block,
+                textureMap,
+                blockStateModelGenerator.modelCollector
+        );
+        blockStateModelGenerator.blockStateCollector.accept(
+                BlockStateModelGenerator.createStairsBlockState(block, innerModelId, regularModelId, outerModelId)
         );
     }
 

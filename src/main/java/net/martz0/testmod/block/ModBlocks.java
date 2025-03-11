@@ -2,9 +2,7 @@ package net.martz0.testmod.block;
 
 import net.martz0.testmod.TestMod;
 import net.martz0.testmod.block.custom.WeirdBlock;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.MapColor;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -50,6 +48,18 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.HAT)
                     .strength(4F)
                     .sounds(BlockSoundGroup.GLASS),
+            true
+    );
+
+    public static final Block SMOOTH_STONE_STAIRS = register(
+            "smooth_stone_stairs",
+            settings -> new StairsBlock(Blocks.SMOOTH_STONE.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.STONE_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(2.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
             true
     );
 
