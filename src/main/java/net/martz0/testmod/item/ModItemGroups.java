@@ -26,6 +26,7 @@ public class ModItemGroups {
             itemGroup.add(ModItems.RAMA_ESSENCE);
             itemGroup.add(ModItems.DARK_FEATHER);
             itemGroup.add(ModItems.RAMA_CRYSTAL);
+            itemGroup.add(ModBlocks.RAMA_CRYSTAL_BLOCK);
             itemGroup.add(ModBlocks.INFUSION_TABLE);
             itemGroup.add(ModItems.DIAMOND_TRANSMUTER);
             itemGroup.add(ModBlocks.WEIRD_BLOCK);

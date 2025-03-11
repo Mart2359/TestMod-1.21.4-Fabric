@@ -33,6 +33,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("multi_bench")
                         .criterion(hasItem(ModItems.RAMA_ESSENCE), conditionsFromItem(ModItems.RAMA_ESSENCE))
                         .offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAMA_CRYSTAL_BLOCK)
+                        .pattern("rrr")
+                        .pattern("rrr")
+                        .pattern("rrr")
+                        .input('r', ModItems.RAMA_CRYSTAL)
+                        .group("multi_bench")
+                        .criterion(hasItem(ModItems.RAMA_CRYSTAL), conditionsFromItem(ModItems.RAMA_CRYSTAL))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.MISC, ModItems.RAMA_CRYSTAL)
+                        .input(ModBlocks.RAMA_CRYSTAL_BLOCK)
+                        .criterion(hasItem(ModBlocks.RAMA_CRYSTAL_BLOCK), conditionsFromItem(ModBlocks.RAMA_CRYSTAL_BLOCK))
+                        .offerTo(exporter, "rama_crystal_from_rama_crystal_block");
                 createShaped(RecipeCategory.MISC, ModBlocks.INFUSION_TABLE)
                         .pattern("rr")
                         .pattern("pp")

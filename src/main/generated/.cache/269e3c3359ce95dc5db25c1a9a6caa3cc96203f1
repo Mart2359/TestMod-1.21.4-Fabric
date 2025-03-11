@@ -1,2 +1,4 @@
 // 1.21.4	-999999999-01-01T00:00:00	Test Mod/Tags for minecraft:block
 658966e9d1ac9118d369444b32579aece21ae90e data/minecraft/tags/block/mineable/axe.json
+5c347f796232ef164eb6db95280e1cf1d078f9da data/minecraft/tags/block/mineable/pickaxe.json
+5c347f796232ef164eb6db95280e1cf1d078f9da data/minecraft/tags/block/needs_iron_tool.json

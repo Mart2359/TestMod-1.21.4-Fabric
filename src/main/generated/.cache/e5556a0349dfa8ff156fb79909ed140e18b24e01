@@ -1,3 +1,4 @@
 // 1.21.4	-999999999-01-01T00:00:00	Test Mod/Block Loot Tables
 cf14504707013aa47bf67c4d045a1ac01273f552 data/testmod/loot_table/blocks/infusion_table.json
+5e027f00ca7ce654afa9b107554514ae8ed63817 data/testmod/loot_table/blocks/rama_crystal_block.json
 e4cf7a3f82678af4ef544250c1cdcebe620da9f4 data/testmod/loot_table/blocks/weird_block.json

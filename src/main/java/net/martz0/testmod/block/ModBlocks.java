@@ -19,6 +19,17 @@ import java.util.function.Function;
 
 public class ModBlocks {
 
+    public static final Block RAMA_CRYSTAL_BLOCK = register(
+            "rama_crystal_block",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .requiresTool()
+                    .strength(4F, 6F)
+                    .sounds(BlockSoundGroup.METAL),
+            true
+    );
+
     public static final Block INFUSION_TABLE = register(
             "infusion_table",
             Block::new,
@@ -36,7 +47,7 @@ public class ModBlocks {
             WeirdBlock::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.MAGENTA)
-                    .instrument(NoteBlockInstrument.BASS)
+                    .instrument(NoteBlockInstrument.HAT)
                     .strength(4F)
                     .sounds(BlockSoundGroup.GLASS),
             true
