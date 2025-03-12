@@ -12,6 +12,8 @@ import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -22,13 +24,22 @@ import java.util.List;
 
 public class WeirdBlock extends Block {
 
+    public static final BooleanProperty CLICKED = BooleanProperty.of("clicked");
+
     public WeirdBlock(Settings settings) {
         super(settings);
+        setDefaultState(this.getDefaultState().with(CLICKED, false));
     }
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        world.playSound(null, pos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.4F + 0.8F);
+        if (!world.isClient()) {
+            if (state.get(CLICKED))
+                world.playSound(null, pos, SoundEvents.BLOCK_ANVIL_FALL, SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.4F + 0.8F);
+            else
+                world.playSound(null, pos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.4F + 0.8F);
+            world.setBlockState(pos, state.cycle(CLICKED));
+        }
         return ActionResult.SUCCESS;
     }
 
@@ -67,5 +78,10 @@ public class WeirdBlock extends Block {
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         tooltip.add(Text.translatable("tooltip.testmod.weird_block"));
         super.appendTooltip(stack, context, tooltip, options);
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(CLICKED);
     }
 }

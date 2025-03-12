@@ -47,7 +47,8 @@ public class ModBlocks {
                     .mapColor(MapColor.MAGENTA)
                     .instrument(NoteBlockInstrument.HAT)
                     .strength(4F)
-                    .sounds(BlockSoundGroup.GLASS),
+                    .sounds(BlockSoundGroup.GLASS)
+                    .luminance(state -> state.get(WeirdBlock.CLICKED) ? 8 : 0),
             true
     );
 

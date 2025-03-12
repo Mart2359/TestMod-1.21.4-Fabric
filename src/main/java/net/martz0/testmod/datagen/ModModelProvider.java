@@ -3,6 +3,7 @@ package net.martz0.testmod.datagen;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.martz0.testmod.block.ModBlocks;
+import net.martz0.testmod.block.custom.WeirdBlock;
 import net.martz0.testmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.client.data.*;
@@ -18,7 +19,12 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAMA_CRYSTAL_BLOCK);
         registerSmithingTable(ModBlocks.INFUSION_TABLE, blockStateModelGenerator);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WEIRD_BLOCK);
+
+        Identifier weirdBlockOff = TexturedModel.CUBE_ALL.upload(ModBlocks.WEIRD_BLOCK, blockStateModelGenerator.modelCollector);
+        Identifier weirdBlockOn = blockStateModelGenerator.createSubModel(ModBlocks.WEIRD_BLOCK, "_on", Models.CUBE_ALL, TextureMap::all);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.WEIRD_BLOCK)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(WeirdBlock.CLICKED, weirdBlockOn, weirdBlockOff)));
+
         registerCustomStairs(ModBlocks.SMOOTH_STONE_STAIRS, blockStateModelGenerator);
     }
 

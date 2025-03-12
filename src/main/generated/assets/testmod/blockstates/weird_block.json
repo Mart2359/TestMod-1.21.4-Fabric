@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "clicked=false": {
       "model": "testmod:block/weird_block"
+    },
+    "clicked=true": {
+      "model": "testmod:block/weird_block_on"
     }
   }
 }
