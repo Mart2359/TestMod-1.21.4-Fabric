@@ -3,6 +3,7 @@ package net.martz0.testmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.martz0.testmod.block.ModBlocks;
+import net.martz0.testmod.component.ModDataComponentTypes;
 import net.martz0.testmod.item.ModItemGroups;
 import net.martz0.testmod.item.ModItems;
 import org.slf4j.Logger;
@@ -21,5 +22,6 @@ public class TestMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModDataComponentTypes.registerDataComponentTypes();
 	}
 }

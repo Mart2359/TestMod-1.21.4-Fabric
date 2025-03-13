@@ -1,5 +1,6 @@
 package net.martz0.testmod.item.custom;
 
+import net.martz0.testmod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -43,6 +44,8 @@ public class TransmuterItem extends Item {
                 if (playerEntity instanceof ServerPlayerEntity) {
                     context.getStack().damage(1, playerEntity, LivingEntity.getSlotForHand(context.getHand()));
                 }
+
+                context.getStack().set(ModDataComponentTypes.TIMES_USED, context.getStack().getComponents().get(ModDataComponentTypes.TIMES_USED) + 1);
             }
             return ActionResult.SUCCESS;
         } else {
@@ -54,6 +57,10 @@ public class TransmuterItem extends Item {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         if (!Screen.hasShiftDown())
             tooltip.add(Text.translatable("tooltip.testmod.details"));
+
+        if (stack.get(ModDataComponentTypes.TIMES_USED) != null && stack.get(ModDataComponentTypes.TIMES_USED) != 0)
+            tooltip.add(Text.literal("Times Used: " + stack.get(ModDataComponentTypes.TIMES_USED)));
+
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

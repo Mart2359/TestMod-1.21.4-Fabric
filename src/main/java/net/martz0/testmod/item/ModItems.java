@@ -2,6 +2,7 @@ package net.martz0.testmod.item;
 
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.martz0.testmod.TestMod;
+import net.martz0.testmod.component.ModDataComponentTypes;
 import net.martz0.testmod.item.custom.TransmuterItem;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
@@ -30,7 +31,7 @@ public final class ModItems {
                 tooltip.add(Text.translatable("tooltip.testmod.diamond_transmuter"));
             super.appendTooltip(stack, context, tooltip, type);
         }
-    }, new Item.Settings().maxDamage(64));
+    }, new Item.Settings().maxDamage(64).component(ModDataComponentTypes.TIMES_USED, 0));
     public static final Item BANANA = register("banana", Item::new, new Item.Settings().food(ModFoodComponents.BANANA, ModConsumableComponents.BANANA));
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
