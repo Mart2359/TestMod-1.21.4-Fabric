@@ -1,2 +1,7 @@
 // 1.21.4	-999999999-01-01T00:00:00	Test Mod/Tags for minecraft:item
+b04f94ea1ad16a6b56b4c04f4f4f8ffabb30d1d7 data/minecraft/tags/item/axes.json
+2bff689cf4ecf192f579b7739007a80c2edc5ebd data/minecraft/tags/item/hoes.json
+07f2782830887a9dcc417cbdf8d4193b30997363 data/minecraft/tags/item/pickaxes.json
+15013963e03b1869fd04468a18e574fed9264669 data/minecraft/tags/item/shovels.json
+40f608dc9044c4a730160ff70c85ec6cef2bddf1 data/minecraft/tags/item/swords.json
 dd9eb10b091f1da587745a34485ac44c401d8b9c data/testmod/tags/item/weird_block_transformable.json

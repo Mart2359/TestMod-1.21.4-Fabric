@@ -6,9 +6,7 @@ import net.martz0.testmod.component.ModDataComponentTypes;
 import net.martz0.testmod.item.custom.TransmuterItem;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -32,7 +30,19 @@ public final class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     }, new Item.Settings().maxDamage(64).component(ModDataComponentTypes.TIMES_USED, 0));
+
     public static final Item BANANA = register("banana", Item::new, new Item.Settings().food(ModFoodComponents.BANANA, ModConsumableComponents.BANANA));
+
+    public static final Item RAMA_CRYSTAL_SWORD = register("rama_crystal_sword",
+            settings -> new SwordItem(ModToolMaterials.RAMA_CRYSTAL, 3.0f, -2.4f, settings), new Item.Settings());
+    public static final Item RAMA_CRYSTAL_PICKAXE = register("rama_crystal_pickaxe",
+            settings -> new PickaxeItem(ModToolMaterials.RAMA_CRYSTAL, 1.0f, -2.8f, settings), new Item.Settings());
+    public static final Item RAMA_CRYSTAL_AXE = register("rama_crystal_axe",
+            settings -> new AxeItem(ModToolMaterials.RAMA_CRYSTAL, 5.0f, -3.0f, settings), new Item.Settings());
+    public static final Item RAMA_CRYSTAL_SHOVEL = register("rama_crystal_shovel",
+            settings -> new ShovelItem(ModToolMaterials.RAMA_CRYSTAL, 1.5f, -3.0f, settings), new Item.Settings());
+    public static final Item RAMA_CRYSTAL_HOE = register("rama_crystal_hoe",
+            settings -> new HoeItem(ModToolMaterials.RAMA_CRYSTAL, -3.0f, 0.0f, settings), new Item.Settings());
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestMod.MOD_ID, path));

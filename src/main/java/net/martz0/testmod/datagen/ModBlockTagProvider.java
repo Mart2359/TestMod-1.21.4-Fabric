@@ -3,6 +3,7 @@ package net.martz0.testmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.martz0.testmod.block.ModBlocks;
+import net.martz0.testmod.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -25,5 +26,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RAMA_CRYSTAL_BLOCK);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_RAMA_CRYSTAL_TOOL)
+                .addOptionalTag(BlockTags.NEEDS_DIAMOND_TOOL);
     }
 }

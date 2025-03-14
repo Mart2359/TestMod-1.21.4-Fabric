@@ -32,6 +32,11 @@ public class ModItemGroups {
             itemGroup.add(ModBlocks.WEIRD_BLOCK);
             itemGroup.add(ModItems.BANANA);
             itemGroup.add(ModBlocks.SMOOTH_STONE_STAIRS);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_SWORD);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_PICKAXE);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_AXE);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_SHOVEL);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_HOE);
         });
     }
 

@@ -2,3 +2,4 @@
 658966e9d1ac9118d369444b32579aece21ae90e data/minecraft/tags/block/mineable/axe.json
 8bb3eced8a5be2b2ca08dc163919ba3af1e5ad87 data/minecraft/tags/block/mineable/pickaxe.json
 5c347f796232ef164eb6db95280e1cf1d078f9da data/minecraft/tags/block/needs_iron_tool.json
+af1e9dcb3ecb909bde41700ab3e478a302ea9b2e data/testmod/tags/block/needs_rama_crystal_tool.json

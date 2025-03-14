@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "m": "testmod:rama_crystal",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    "mm",
+    " s",
+    " s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:rama_crystal_hoe"
+  }
+}

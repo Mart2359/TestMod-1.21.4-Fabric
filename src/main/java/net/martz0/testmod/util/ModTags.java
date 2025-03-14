@@ -11,6 +11,9 @@ public class ModTags {
 
     public static class Blocks {
 
+        public static final TagKey<Block> NEEDS_RAMA_CRYSTAL_TOOL = createTag("needs_rama_crystal_tool");
+        public static final TagKey<Block> INCORRECT_FOR_RAMA_CRYSTAL_TOOL = createTag("incorrect_for_rama_crystal_tool");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TestMod.MOD_ID, name));
         }
@@ -19,6 +22,7 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item> WEIRD_BLOCK_TRANSFORMABLE = createTag("weird_block_transformable");
+        public static final TagKey<Item> RAMA_CRYSTAL_TOOL_MATERIALS = createTag("rama_crystal_tool_materials");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(TestMod.MOD_ID, name));
