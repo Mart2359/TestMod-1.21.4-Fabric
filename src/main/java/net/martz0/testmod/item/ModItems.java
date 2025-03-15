@@ -2,6 +2,7 @@ package net.martz0.testmod.item;
 
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.martz0.testmod.TestMod;
+import net.martz0.testmod.block.custom.HammerItem;
 import net.martz0.testmod.component.ModDataComponentTypes;
 import net.martz0.testmod.item.custom.TransmuterItem;
 import net.minecraft.block.Blocks;
@@ -43,6 +44,8 @@ public final class ModItems {
             settings -> new ShovelItem(ModToolMaterials.RAMA_CRYSTAL, 1.5f, -3.0f, settings), new Item.Settings());
     public static final Item RAMA_CRYSTAL_HOE = register("rama_crystal_hoe",
             settings -> new HoeItem(ModToolMaterials.RAMA_CRYSTAL, -3.0f, 0.0f, settings), new Item.Settings());
+    public static final Item RAMA_CRYSTAL_HAMMER = register("rama_crystal_hammer",
+            settings -> new HammerItem(ModToolMaterials.RAMA_CRYSTAL, 4.0f, -3.0f, settings), new Item.Settings());
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestMod.MOD_ID, path));

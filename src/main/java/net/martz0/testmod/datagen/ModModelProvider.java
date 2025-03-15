@@ -80,5 +80,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RAMA_CRYSTAL_HAMMER, Models.HANDHELD);
     }
 }

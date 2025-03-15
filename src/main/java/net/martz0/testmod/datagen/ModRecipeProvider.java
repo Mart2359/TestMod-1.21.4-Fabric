@@ -87,6 +87,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createAxe(ModItems.RAMA_CRYSTAL_AXE, ModItems.RAMA_CRYSTAL);
                 createShovel(ModItems.RAMA_CRYSTAL_SHOVEL, ModItems.RAMA_CRYSTAL);
                 createHoe(ModItems.RAMA_CRYSTAL_HOE, ModItems.RAMA_CRYSTAL);
+                createHammer(ModItems.RAMA_CRYSTAL_HAMMER, ModItems.RAMA_CRYSTAL);
             }
 
             private void createSword(ItemConvertible output, ItemConvertible material) {
@@ -134,6 +135,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("mm")
                         .pattern(" s")
                         .pattern(" s")
+                        .input('m', material)
+                        .input('s', Items.STICK)
+                        .criterion(hasItem(material), conditionsFromItem(material))
+                        .offerTo(exporter);
+            }
+            private void createHammer(ItemConvertible output, ItemConvertible material) {
+                createShaped(RecipeCategory.TOOLS, output)
+                        .pattern("mmm")
+                        .pattern("msm")
+                        .pattern(" s ")
                         .input('m', material)
                         .input('s', Items.STICK)
                         .criterion(hasItem(material), conditionsFromItem(material))

@@ -2,10 +2,12 @@ package net.martz0.testmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.martz0.testmod.block.ModBlocks;
 import net.martz0.testmod.component.ModDataComponentTypes;
 import net.martz0.testmod.item.ModItemGroups;
 import net.martz0.testmod.item.ModItems;
+import net.martz0.testmod.util.HammerUseEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,5 +25,7 @@ public class TestMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUseEvent());
 	}
 }

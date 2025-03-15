@@ -37,6 +37,7 @@ public class ModItemGroups {
             itemGroup.add(ModItems.RAMA_CRYSTAL_AXE);
             itemGroup.add(ModItems.RAMA_CRYSTAL_SHOVEL);
             itemGroup.add(ModItems.RAMA_CRYSTAL_HOE);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_HAMMER);
         });
     }
 
