@@ -85,9 +85,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_HAMMER, Models.HANDHELD);
 
-        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_HELMET, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "rama_crystal", false);
-        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_CHESTPLATE, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "rama_crystal", false);
-        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_LEGGINGS, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "rama_crystal", false);
-        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_BOOTS, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "rama_crystal", false);
+        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_HELMET, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "helmet", false);
+        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_CHESTPLATE, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "chestplate", false);
+        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_LEGGINGS, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "leggings", false);
+        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_BOOTS, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "boots", false);
     }
 }
