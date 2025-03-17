@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "testmod:rama_crystal"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "testmod:rama_crystal"
+      }
+    ]
+  }
+}

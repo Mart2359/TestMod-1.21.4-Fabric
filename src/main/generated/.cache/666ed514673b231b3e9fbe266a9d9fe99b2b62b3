@@ -4,4 +4,5 @@ b04f94ea1ad16a6b56b4c04f4f4f8ffabb30d1d7 data/minecraft/tags/item/axes.json
 07f2782830887a9dcc417cbdf8d4193b30997363 data/minecraft/tags/item/pickaxes.json
 15013963e03b1869fd04468a18e574fed9264669 data/minecraft/tags/item/shovels.json
 40f608dc9044c4a730160ff70c85ec6cef2bddf1 data/minecraft/tags/item/swords.json
+2ac63016a009b67c6f72e6937b285430e0ce6b23 data/minecraft/tags/item/trimmable_armor.json
 dd9eb10b091f1da587745a34485ac44c401d8b9c data/testmod/tags/item/weird_block_transformable.json

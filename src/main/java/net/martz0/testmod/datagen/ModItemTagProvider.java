@@ -36,5 +36,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.RAMA_CRYSTAL_HOE);
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.RAMA_CRYSTAL_HELMET)
+                .add(ModItems.RAMA_CRYSTAL_CHESTPLATE)
+                .add(ModItems.RAMA_CRYSTAL_LEGGINGS)
+                .add(ModItems.RAMA_CRYSTAL_BOOTS);
     }
 }

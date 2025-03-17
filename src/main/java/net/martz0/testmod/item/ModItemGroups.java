@@ -28,16 +28,23 @@ public class ModItemGroups {
             itemGroup.add(ModItems.RAMA_CRYSTAL);
             itemGroup.add(ModBlocks.RAMA_CRYSTAL_BLOCK);
             itemGroup.add(ModBlocks.INFUSION_TABLE);
+
             itemGroup.add(ModItems.DIAMOND_TRANSMUTER);
             itemGroup.add(ModBlocks.WEIRD_BLOCK);
             itemGroup.add(ModItems.BANANA);
             itemGroup.add(ModBlocks.SMOOTH_STONE_STAIRS);
+
             itemGroup.add(ModItems.RAMA_CRYSTAL_SWORD);
             itemGroup.add(ModItems.RAMA_CRYSTAL_PICKAXE);
             itemGroup.add(ModItems.RAMA_CRYSTAL_AXE);
             itemGroup.add(ModItems.RAMA_CRYSTAL_SHOVEL);
             itemGroup.add(ModItems.RAMA_CRYSTAL_HOE);
             itemGroup.add(ModItems.RAMA_CRYSTAL_HAMMER);
+
+            itemGroup.add(ModItems.RAMA_CRYSTAL_HELMET);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_CHESTPLATE);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_LEGGINGS);
+            itemGroup.add(ModItems.RAMA_CRYSTAL_BOOTS);
         });
     }
 

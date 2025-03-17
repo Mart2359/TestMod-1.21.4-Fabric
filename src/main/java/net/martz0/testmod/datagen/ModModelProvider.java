@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.martz0.testmod.block.ModBlocks;
 import net.martz0.testmod.block.custom.WeirdBlock;
+import net.martz0.testmod.item.ModArmorMaterials;
 import net.martz0.testmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.client.data.*;
@@ -73,13 +74,20 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DARK_FEATHER, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAMA_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.DIAMOND_TRANSMUTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.BANANA, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RAMA_CRYSTAL_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_HELMET, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "rama_crystal", false);
+        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_CHESTPLATE, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "rama_crystal", false);
+        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_LEGGINGS, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "rama_crystal", false);
+        itemModelGenerator.registerArmor(ModItems.RAMA_CRYSTAL_BOOTS, ModArmorMaterials.RAMA_CRYSTAL_ARMOR_MATERIAL_KEY, "rama_crystal", false);
     }
 }

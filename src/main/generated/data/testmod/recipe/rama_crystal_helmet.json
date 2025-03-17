@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "m": "testmod:rama_crystal"
+  },
+  "pattern": [
+    "mmm",
+    "m m"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:rama_crystal_helmet"
+  }
+}

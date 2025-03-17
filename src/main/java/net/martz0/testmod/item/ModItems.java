@@ -8,6 +8,7 @@ import net.martz0.testmod.item.custom.TransmuterItem;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -46,6 +47,15 @@ public final class ModItems {
             settings -> new HoeItem(ModToolMaterials.RAMA_CRYSTAL, -3.0f, 0.0f, settings), new Item.Settings());
     public static final Item RAMA_CRYSTAL_HAMMER = register("rama_crystal_hammer",
             settings -> new HammerItem(ModToolMaterials.RAMA_CRYSTAL, 4.0f, -3.0f, settings), new Item.Settings());
+
+    public static final Item RAMA_CRYSTAL_HELMET = register("rama_crystal_helmet",
+            settings -> new ArmorItem(ModArmorMaterials.RAMA_CRYSTAL_ARMOR, EquipmentType.HELMET, settings), new Item.Settings());
+    public static final Item RAMA_CRYSTAL_CHESTPLATE = register("rama_crystal_chestplate",
+            settings -> new ArmorItem(ModArmorMaterials.RAMA_CRYSTAL_ARMOR, EquipmentType.CHESTPLATE, settings), new Item.Settings());
+    public static final Item RAMA_CRYSTAL_LEGGINGS = register("rama_crystal_leggings",
+            settings -> new ArmorItem(ModArmorMaterials.RAMA_CRYSTAL_ARMOR, EquipmentType.LEGGINGS, settings), new Item.Settings());
+    public static final Item RAMA_CRYSTAL_BOOTS = register("rama_crystal_boots",
+            settings -> new ArmorItem(ModArmorMaterials.RAMA_CRYSTAL_ARMOR, EquipmentType.BOOTS, settings), new Item.Settings());
 
     public static Item register(String path, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestMod.MOD_ID, path));

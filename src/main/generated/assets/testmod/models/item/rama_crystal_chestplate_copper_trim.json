@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "testmod:item/rama_crystal_chestplate",
+    "layer1": "minecraft:trims/items/rama_crystal_trim_copper"
+  }
+}

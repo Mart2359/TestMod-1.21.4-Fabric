@@ -88,6 +88,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createShovel(ModItems.RAMA_CRYSTAL_SHOVEL, ModItems.RAMA_CRYSTAL);
                 createHoe(ModItems.RAMA_CRYSTAL_HOE, ModItems.RAMA_CRYSTAL);
                 createHammer(ModItems.RAMA_CRYSTAL_HAMMER, ModItems.RAMA_CRYSTAL);
+
+                createHelmet(ModItems.RAMA_CRYSTAL_HELMET, ModItems.RAMA_CRYSTAL);
+                createChestplate(ModItems.RAMA_CRYSTAL_CHESTPLATE, ModItems.RAMA_CRYSTAL);
+                createLeggings(ModItems.RAMA_CRYSTAL_LEGGINGS, ModItems.RAMA_CRYSTAL);
+                createBoots(ModItems.RAMA_CRYSTAL_BOOTS, ModItems.RAMA_CRYSTAL);
             }
 
             private void createSword(ItemConvertible output, ItemConvertible material) {
@@ -147,6 +152,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" s ")
                         .input('m', material)
                         .input('s', Items.STICK)
+                        .criterion(hasItem(material), conditionsFromItem(material))
+                        .offerTo(exporter);
+            }
+            private void createHelmet(ItemConvertible output, ItemConvertible material) {
+                createShaped(RecipeCategory.COMBAT, output)
+                        .pattern("mmm")
+                        .pattern("m m")
+                        .input('m', material)
+                        .criterion(hasItem(material), conditionsFromItem(material))
+                        .offerTo(exporter);
+            }
+            private void createChestplate(ItemConvertible output, ItemConvertible material) {
+                createShaped(RecipeCategory.COMBAT, output)
+                        .pattern("m m")
+                        .pattern("mmm")
+                        .pattern("mmm")
+                        .input('m', material)
+                        .criterion(hasItem(material), conditionsFromItem(material))
+                        .offerTo(exporter);
+            }
+            private void createLeggings(ItemConvertible output, ItemConvertible material) {
+                createShaped(RecipeCategory.COMBAT, output)
+                        .pattern("mmm")
+                        .pattern("m m")
+                        .pattern("m m")
+                        .input('m', material)
+                        .criterion(hasItem(material), conditionsFromItem(material))
+                        .offerTo(exporter);
+            }
+            private void createBoots(ItemConvertible output, ItemConvertible material) {
+                createShaped(RecipeCategory.COMBAT, output)
+                        .pattern("m m")
+                        .pattern("m m")
+                        .input('m', material)
                         .criterion(hasItem(material), conditionsFromItem(material))
                         .offerTo(exporter);
             }
